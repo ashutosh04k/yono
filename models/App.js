@@ -6,7 +6,9 @@ const appSchema = new mongoose.Schema({
   withdraw: String,
   icon: String,
   downloadLink: String,
-  isNew: Boolean
+  isNew: Boolean,
+  metatitle: String,
+  metadescription: String
 }, { timestamps: true });
 
 export default mongoose.model("App", appSchema);
