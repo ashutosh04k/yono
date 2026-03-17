@@ -8,7 +8,12 @@ const appSchema = new mongoose.Schema({
   downloadLink: String,
   isNew: Boolean,
   metatitle: String,
-  metadescription: String
+  metadescription: String,
+  slug: {
+    type: String,
+    unique: true,
+    index: true,
+  },
 }, { timestamps: true });
 
 export default mongoose.model("App", appSchema);
