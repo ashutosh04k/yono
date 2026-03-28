@@ -15,6 +15,10 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB Connected"));
 
+app.get("/", (req, res) => {
+  res.send("API is running 🚀");
+});
+
 app.use("/api/apps", appRoutes);
 app.use("/api/admin", adminRoutes);
 
